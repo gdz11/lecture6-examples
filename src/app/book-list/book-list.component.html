@@ -1,0 +1,18 @@
+<form [formGroup]="form" (ngSubmit)="onAddBook()">
+    <input placeholder="title" formControlName="title" />
+    <input placeholder="author" formControlName="author" />
+<button type="submit">Add</button>
+</form>
+
+<div *ngFor="let book of books" class="book-row">
+    <div class="cell">{{book.id}}</div>
+    <div class="cell">{{book.title}}</div>
+    <div class="cell">{{book.author}}</div>
+</div>
+
+<br><br>
+<div *ngFor="let book of books2 | async" class="book-row">
+    <div class="cell">{{book.id}}</div>
+    <div class="cell">{{book.title}}</div>
+    <div class="cell">{{book.author}}</div>
+</div>

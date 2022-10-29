@@ -1,0 +1,9 @@
+.boor-row{
+    display: table-row;
+}
+
+.cell {
+    display: table-cell;
+    border: solid 1px black;
+    padding: 5px;
+}

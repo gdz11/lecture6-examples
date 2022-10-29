@@ -1,0 +1,11 @@
+
+<form [formGroup]="form" (ngSubmit)="onSearchBook()">
+    <input placeholder="title" formControlName="title" />
+    <input placeholder="author" formControlName="author" />
+<button type="submit">Search</button>
+</form>
+<div *ngFor="let book of books | async" class="book-row">
+    <div class="cell">{{book.id}}</div>
+    <div class="cell">{{book.title}}</div>
+    <div class="cell">{{book.author}}</div>
+</div>
